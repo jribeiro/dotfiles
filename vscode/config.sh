@@ -1,7 +1,9 @@
 #!/bin/sh
 
+BASE=$(cd "$(dirname "$0")"; pwd -P)
+
 # Install extensions
-sh ./extensions.sh
+source $BASE/extensions.sh
 
 # Link settings
-ln -s ./settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -nsf $BASE/settings.json $HOME/Library/Application\ Support/Code/User/settings.json

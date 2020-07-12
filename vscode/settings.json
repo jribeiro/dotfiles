@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Material Theme Darker High Contrast",
+  "workbench.colorTheme": "Material Theme Lighter",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorCustomizations": {},
   "eslint.alwaysShowStatus": true,
@@ -7,5 +7,10 @@
     "source.fixAll.eslint": true
   },
   "eslint.runtime": "",
-  "editor.formatOnSave": true
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "editor.formatOnSave": false,
+  "explorer.confirmDragAndDrop": false,
+  "window.zoomLevel": 0,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true
 }

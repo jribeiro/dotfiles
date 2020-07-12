@@ -6,31 +6,33 @@
 
 function doIt() {
     # symlink the configuration files
-    ln -s ./.curlrc ~/.curlrc
-    ln -s ./.editorconfig ~/.editorconfig
-    ln -s ./.gitconfig ~/.gitconfig
-    ln -s ./.gitignore ~/.gitignore
-    ln -s ./.gvimrc ~/.gvimrc
-    ln -s ./.vimrc ~/.vimrc
-    ln -s ./.wgetrc ~/.wgetrc
-    ln -s ./.vim ~/.vim
+    ln -nsf $PWD/.curlrc $HOME/.curlrc
+    ln -nsf $PWD/.editorconfig $HOME/.editorconfig
+    ln -nsf $PWD/.gitconfig $HOME/.gitconfig
+    ln -nsf $PWD/.gitignore $HOME/.gitignore
+    ln -nsf $PWD/.gvimrc $HOME/.gvimrc
+    ln -nsf $PWD/.vimrc $HOME/.vimrc
+    ln -nsf $PWD/.wgetrc $HOME/.wgetrc
+    ln -nsf $PWD/.vim $HOME/.vim
     
     # install software used frequently
-    sh brew.sh
-
-    # Install node and dependencies
-    sh npm.sh
-
-    # Configure vscode
-    sh ./vscode/config.sh
-    
-    # Configure iterm
-    sh iterm2.sh
+    source brew.sh
 
     # Install and configure oh-my-zsh
-    sh ./oh-my-zsh/config.sh
+    source ./oh-my-zsh/config.sh
+
+    # Install node and dependencies
+    source npm.sh
+
+    # Configure vscode
+    source ./vscode/config.sh
     
-    source ~/.zshrc;
+    # Configure iterm
+    source iterm2.sh
+
+    source ./macos
+
+    echo "Open iTerm2 to continue the setup"
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

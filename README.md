@@ -17,19 +17,19 @@ xcode-select --install
 You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`. The bootstrapper script will pull in the latest version and symlink the required files.
 
 ```bash
-git clone https://github.com/jribeiro/dotfiles.git && cd dotfiles && sh bootstrap.sh
+git clone https://github.com/jribeiro/dotfiles.git && cd dotfiles && source bootstrap.sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
 
 ```bash
-sh bootstrap.sh
+source bootstrap.sh
 ```
 
 Alternatively, to update while avoiding the confirmation prompt:
 
 ```bash
-set -- -f; sh bootstrap.sh
+set -- -f; source bootstrap.sh
 ```
 
 ### Post Install
