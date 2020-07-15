@@ -57,13 +57,19 @@ brew install zsh-completions
 brew cask install iterm2
 brew cask install google-chrome
 brew cask install visual-studio-code
-brew cask install sourcetree
+brew cask install fork
 brew cask install slack
 brew cask install omnifocus
 brew cask install daisydisk
 brew cask install spotify
 brew cask install omnifocus
 brew cask install rectangle
+brew cask install caffeine
+
+
+# Fonts
+brew tap homebrew/cask-fonts
+brew cask install font-fira-code
 
 # Remove outdated versions from the cellar.
 brew cleanup

@@ -10,6 +10,10 @@ TARGET_PATH=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $TARGET_PATH/themes/powerlevel10k
 ln -nsf $SOURCE_PATH/.p10k.zsh $HOME/.p10k.zsh # Link theme settings
 
+## Powerline fonts
+git clone --depth=1 https://github.com/romkatv/powerlevel10k-media.git /tmp/powerlevel10k-media
+rsync -av /tmp/powerlevel10k-media/*.ttf /Library/Fonts/
+
 # zsh autosuggestions plugin
 git clone https://github.com/zsh-users/zsh-autosuggestions $TARGET_PATH/plugins/zsh-autosuggestions
 
